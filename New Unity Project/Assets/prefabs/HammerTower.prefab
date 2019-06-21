@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1549916544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280527343385714682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06646931, y: 0.0033989996, z: 0.022873173}
+  m_Center: {x: 0.000000015722206, y: -0.012892702, z: 0.000000014992487}
 --- !u!1 &4260494688833648707
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +24,8 @@ GameObject:
   - component: {fileID: 971379491564210768}
   - component: {fileID: 8079473396691759206}
   - component: {fileID: 2530045885971958943}
+  - component: {fileID: 3138449754144683649}
+  - component: {fileID: 3138449754144683650}
   m_Layer: 0
   m_Name: HammerTower
   m_TagString: Untagged
@@ -81,6 +96,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3138449754144683649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4260494688833648707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10000001, y: 0.5532284, z: 0.100000024}
+  m_Center: {x: 0, y: -0.02193354, z: -0.022320442}
+--- !u!114 &3138449754144683650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4260494688833648707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1463026728bab4cad73f17137798a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hammer: {fileID: 1280527343385714682}
+  swingSpeed: 5
+  maxSwingAmount: 180
 --- !u!1001 &7126020363785422579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,22 +154,22 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2490685
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.13877802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6316405
+      value: -0.6746245
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.72092706
+      value: 0.73816115
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
@@ -136,20 +179,26 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 10.591001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -31.578001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -85.449005
+      value: -84.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166f865b40a16cb4a8e9c07bc6d9debd, type: 3}
+--- !u!1 &1280527343385714682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7126020363785422579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2854720371229781481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 166f865b40a16cb4a8e9c07bc6d9debd,
