@@ -313,25 +313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1549916543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1280527343385714682, guid: a825fe779f36ab84a9348596542a26e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1201988538047565507}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1549916544
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549916543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.06646931, y: 0.0033989996, z: 0.022873173}
-  m_Center: {x: 0.000000015722206, y: -0.012892702, z: 0.000000014992487}
 --- !u!1 &1837141144
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +720,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoulderTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912940, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912940, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912941, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912941, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.35510048
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912941, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.41645342
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220836370227912938, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63,
+        type: 3}
+      propertyPath: realoadRange
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23bc2bd67ffc8ae4c9c49909eb9d9c63, type: 3}
