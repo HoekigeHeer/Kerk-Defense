@@ -10,7 +10,7 @@ public class BoulderTower : MonoBehaviour
     public GameObject boulderPrefab;
     GameObject boulder;
     public float realoadRange;
-    
+    bool builderDocked = true;
     
 
 
@@ -27,6 +27,7 @@ public class BoulderTower : MonoBehaviour
         if (Vector3.Distance(boulderSpawn.position,boulder.transform.position) > realoadRange)
         {
             boulder = Instantiate(boulderPrefab, boulderSpawn.position, Quaternion.identity);
+            builderDocked = true;
         }
     }
 
@@ -37,8 +38,12 @@ public class BoulderTower : MonoBehaviour
 
     public void DropBuilder()
     {
-        boulder.GetComponent<Rigidbody>().AddForce(0, 0, dropForce);
-        Destroy(boulder, 10);
+        if (builderDocked)
+        {
+            boulder.GetComponent<Rigidbody>().AddForce(0, 0, dropForce);
+            Destroy(boulder, 10);
+            builderDocked = false;
+        }
     }
 
     
