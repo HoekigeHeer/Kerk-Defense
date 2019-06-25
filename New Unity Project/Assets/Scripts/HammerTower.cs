@@ -6,32 +6,40 @@ public class HammerTower : MonoBehaviour
 {
 
     public GameObject hammer;
-    bool swingBack = false;
+    bool swung = false;
     bool swinging = false;
     public float swingSpeed;
-    public float maxSwingAmount;
+    public float startRoration;
+    public float resetRotation;
     float SwingAmount = 0;
+
+    Rigidbody rig;
+
+    void Start()
+    {
+        startRoration = hammer.transform.rotation.z;
+        rig = hammer.GetComponent<Rigidbody>();
+       // startRoration = hammer.transform.rotation.z;
+    }
 
     
     void Update()
     {
-        if (swinging)
-        {
-            if (swingBack)
-            {
-                hammer.transform.Rotate(0, 0, -swingSpeed);
-            }
-            else
-            {
-                hammer.transform.Rotate(0, 0, swingSpeed);
-            }
+        
 
-            SwingAmount += swingSpeed;
-            if(SwingAmount >= maxSwingAmount)
+        if (rig.velocity.z < 0)
+        {
+            rig.constraints = RigidbodyConstraints.FreezeAll;
+            swung = true;
+        }
+
+        if (swung)
+        {
+            hammer.transform.Rotate(0, 0, swingSpeed);
+            Debug.Log(hammer.transform.rotation.z);
+            if (hammer.transform.rotation.y >= startRoration)
             {
-                swinging = false;
-                SwingAmount = 0;
-                swingBack = !swingBack;
+                swung = false;
             }
         }
     }
@@ -39,7 +47,9 @@ public class HammerTower : MonoBehaviour
 
     void OnMouseDown()
     {
-        
-        swinging = true;
+        if (!swung)
+        {
+            rig.constraints = RigidbodyConstraints.None;
+        }
     }
 }
