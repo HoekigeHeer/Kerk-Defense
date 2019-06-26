@@ -162,7 +162,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856119027335826376}
-  m_Mesh: {fileID: -2556723213056787850, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
 --- !u!23 &5714557940127760280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -180,10 +180,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
-  - {fileID: 4218046369211427024, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
-  - {fileID: 7211448773848044386, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
-  - {fileID: -7431700444094239210, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
+  - {fileID: 2100000, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
+  - {fileID: 2100002, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
+  - {fileID: 2100004, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
+  - {fileID: 2100006, guid: 1a9440411e5344045aa77ebe01eb6a27, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   boulderSpawn: {fileID: 1989944623}
   boulderPrefab: {fileID: 8941276035611298842, guid: 02128fcb5c34f644b8e98e0970370197,
     type: 3}
-  realoadRange: 5
+  realoadRange: 15
   dropForce: 1000
 --- !u!114 &7220836370227912939
 MonoBehaviour:

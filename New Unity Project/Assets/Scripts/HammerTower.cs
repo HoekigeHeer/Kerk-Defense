@@ -37,7 +37,7 @@ public class HammerTower : MonoBehaviour
         {
             hammer.transform.Rotate(0, 0, swingSpeed);
             Debug.Log(hammer.transform.rotation.z);
-            if (hammer.transform.rotation.y >= startRoration)
+            if (hammer.transform.rotation.y <= startRoration)
             {
                 swung = false;
             }
