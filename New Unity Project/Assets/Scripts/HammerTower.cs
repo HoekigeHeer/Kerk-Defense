@@ -25,19 +25,25 @@ public class HammerTower : MonoBehaviour
     
     void Update()
     {
+        if (swinging)
+        {
+            rig.constraints = RigidbodyConstraints.None;
+            swinging = false;
+        }
         
 
-        if (rig.velocity.z < 0)
+        if (rig.velocity.x < 0)
         {
             rig.constraints = RigidbodyConstraints.FreezeAll;
             swung = true;
+            Debug.Log("freeze");
         }
 
         if (swung)
         {
-            hammer.transform.Rotate(0, 0, swingSpeed);
-            Debug.Log(hammer.transform.rotation.z);
-            if (hammer.transform.rotation.y <= startRoration)
+            hammer.transform.Rotate(0, 0, -swingSpeed);
+            
+            if (hammer.transform.eulerAngles.z > 90 && hammer.transform.eulerAngles.z < 280 )
             {
                 swung = false;
             }
@@ -49,7 +55,9 @@ public class HammerTower : MonoBehaviour
     {
         if (!swung)
         {
-            rig.constraints = RigidbodyConstraints.None;
+          //  rig.constraints = RigidbodyConstraints.None;
+          //  rig.velocity = new Vector3 (5,0,0) ;
+            swinging = true;
         }
     }
 }
